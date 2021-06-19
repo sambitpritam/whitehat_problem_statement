@@ -3,9 +3,10 @@
   become: yes
   tasks:
     - name: Copy file with owner, group, permissions
-      ansible.builtin.copy:
-        src: /home/ansible/foo
+      ansible.builtin.fetch:
+        src: /etc/foo
         dest: /etc/foo
+        flat: yes
         owner: root
         group: root
         mode: '0644'
