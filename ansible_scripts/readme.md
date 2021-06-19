@@ -6,7 +6,8 @@ This Document will guide on setting up of Ansible on rpm based linux environment
 
 To execute ansible scripts on aws instances,
 
-- create private key `ec2.pem` files to connect to ec2 instances using ssh
+- Create ec2 instances with names `sample-instance-*`. This value can be changed in the hosts of `copy_file.yaml`.
+- create private key `ec2.pem` files to connect to ec2 instances using ssh.
 - Ensure the security group of EC2 Instances have ssh enabled
 - Create aws configuration and credentials for python scripts execution: `~/.aws/credentials` and `~/.aws/config` with default profiles
 - file `/home/ansible/foo` should be available in the mentioned location.
@@ -121,7 +122,7 @@ output=json
 ```shell
 $ cd ./ansible-scripts
 $ chmod +x get_aws_running_hosts.py
-$ ansible-playbook -i get_aws_running_hosts.py copy_files.yaml -u ec2-user --private-key=~/ec2.pem
+$ ansible-playbook -i get_aws_running_hosts.py copy_file.yaml -u <EC2_USERNAME> --private-key=<PRIVATE_KEY_FILE>
 ```
 
 
