@@ -24,7 +24,7 @@ Content of `~/.aws/config`
 
 ```properties
 [default]
-region=us-west-2
+region=xxxx
 output=json
 ```
 

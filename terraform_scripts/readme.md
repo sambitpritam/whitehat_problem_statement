@@ -23,7 +23,7 @@ Content for `~/.aws/config`
 
 ```properties
 [default]
-region=us-west-2
+region=xxxx
 output=json
 ```
 
@@ -33,7 +33,7 @@ output=json
 Execute below commands to deploy RDS Instance to AWS Cluster.
 
 ```shell
-$ cd ./terraform/
+$ cd ./terraform_scripts/
 $ terraform init
 $ terraform plan
 $ terraform apply
@@ -42,7 +42,7 @@ $ terraform apply
 To destroy the created resources, execute the below command
 
 ```shell
-$ cd ./terraform/
+$ cd ./terraform_scripts/
 $ terraform destroy
 ```
 
