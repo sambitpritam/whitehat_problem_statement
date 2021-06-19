@@ -1,0 +1,11 @@
+---
+- hosts: sample-instance-*
+  become: yes
+  tasks:
+    - name: Copy file with owner, group, permissions
+      ansible.builtin.copy:
+        src: /home/ansible/foo
+        dest: /etc/foo
+        owner: root
+        group: root
+        mode: '0644'
